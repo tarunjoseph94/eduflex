@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <%include head.html%>
+</head>
+<body>
+  <%include nav.html%>
+
+  <section class="hero">
+    <div class="col s12">
+      <div class="herobg">
+      </div>
+    </div>
+  </section>
+  <div class="wrapper">
+    <div class="container-fluid">
+
+      <section class="feat">
+        <div class="row">
+          <div class="col s12">
+            <center>
+              <h2>Careers</h2>
+            </center>
+            <p>
+              Everyone wants to be part of a successful team and at Eduflex
+              it's no different. Our people never stop striving to achieve.
+              They push themselves to do their best work, no matter what
+              challenges they face.There is something else that sets Eduflex
+              apart. Here we believe in offering much more than just a job; we
+              strive to give you a full-fledged career. Towards this end we
+              provide you with excellent training and the opportunity to work
+              in different industry and service practices on the latest
+              cutting-edge technology platforms. We have an open-door policy.
+              In our project teams and in our relationships with clients,
+              we operate in an environment that places a high value on
+              collaboration. We create value for clients in an environment of
+              shared ideas, shared efforts, and shared responsibilities.
+              There's a great deal that Eduflex can offer you. Take a closer
+              look and discover what we can achieve together.
+            </p>
+            <h6>Our Culture</h6>
+            <p>Eduflex's culture is a product of our core values delivering
+              on every promise and applying world-class expertise coupled with
+              a solid understanding of our clients' strategic goals. We
+              believe that demonstrating our values is only possible through
+              employee empowerment.
+              Eduflex offers excellent compensation and benefits, a variety
+              of ongoing training and development opportunities, and a
+              constant flow of new challenges and interesting work
+              environments. As a member of the Eduflex team, you will be
+              exposed to the most exciting career adventures situated on the
+              cutting edge of technology. Over the years, our culture has
+              evolved to what it is today -- a community designed by
+              employees who expect to achieve excellence.
+              Eduflex provides an environment that encourages our employees
+              to innovate, design and develop solutions for our customers in
+              a collaborative, highly energized environment. We value open
+              communication, flexible teamworking, enthusiasm for change and
+              original thinking Teamwork is critical to the quality of our
+              culture as well as our ability to deliver for our clients
+              With all of the diverse backgrounds, points of view, and areas
+              of expertise, you will find Eduflex people unified by the
+              shared core values of professionalism, fairness, integrity,
+              respect, trust, customer service, diversity, entrepreneurship,
+              excellence, and teamwork. These core values define how we
+              work together to serve out clients and build our
+              organization.</p>
+              <form class="" action="/careers" method="post"  encType="multipart/form-data">
+                <p>
+                  <em>Personal Information</em>
+                </p>
+                <div class="row">
+                  <div class="input-field col s12 m6">
+                    <input placeholder="First Name" name="first_name" id="first_name" type="text" class="validate">
+                    <label for="first_name">First Name</label>
+                  </div>
+                  <div class="input-field col s12 m6">
+                    <input placeholder="Last Name" id="last_name" name="last_name" type="text" class="validate">
+                    <label for="last_name">Last Name</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12 m6">
+                    <input placeholder="Phone" id="phone" name="phone" type="text" class="validate">
+                    <label for="phone">Phone</label>
+                  </div>
+                  <div class="input-field col s12 m6">
+                    <input placeholder="Email" id="email" name="email" type="text" class="validate">
+                    <label for="email">Email</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <textarea id="address" name="address" class="materialize-textarea"></textarea>
+                    <label for="address">Address</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12 m6">
+                    <input placeholder="City" id="city" name="city" type="text" class="validate">
+                    <label for="city">City</label>
+                  </div>
+                  <div class="input-field col s12 m6">
+                    <input placeholder="Country" id="country" name="country" type="text" class="validate">
+                    <label for="country">Country</label>
+                  </div>
+                </div>
+                <p>
+                  <em>Professional Information</em>
+                </p>
+                <div class="row">
+                  <div class="input-field col s12 m6">
+                    <input placeholder="Desired Salary" id="salary" name="salary" type="text" class="validate">
+                    <label for="salary">Desired Salary</label>
+                  </div>
+                  <div class="input-field col s12 m6">
+                    <input placeholder="Desired Hourly Rate" id="hourlyRate" name="hourlyRate" type="text" class="validate">
+                    <label for="hourlyRate">Desired Hourly Rate</label>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="input-field col s12 m6">
+                    <select name="eligibility" id="eligibility">
+                      <option>Please select one</option>
+                      <option value="US citizen">US citizen</option>
+                      <option value="Canadian citizen">Canadian citizen</option>
+                      <option value="UK citizen">UK citizen</option>
+                      <option value="Permanent Resident">Permanent Resident</option>
+                      <option value="H-1B">H-1B</option>
+                      <option value="F-1">F-1</option>
+                      <option value="Other">Other</option>
+                    </select>
+                    <label>Work Eligibility</label>
+                  </div>
+                  <div class="col s4 m4">
+                    <label>Willing to Relocate?</label>
+                  </div>
+                  <div class="input-field col s12 m3">
+                    <label>
+                      <input name="relocate" value="Yes" type="radio" />
+                      <span>Yes</span>
+                    </label>
+                  </div>
+                  <div class="input-field col s12 m3">
+                    <label>
+                      <input name="relocate" value="No" type="radio" />
+                      <span>No</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12 m6">
+                    <input placeholder="Availability Date" id="availabilityDate" name="availabilityDate"  type="text" class="validate">
+                    <label for="availabilityDate">Availability Date</label>
+                  </div>
+                  <div class="file-field input-field col s12 m6">
+                    <div class="btn">
+                      <span>Resume</span>
+                      <input type="file" name="resume">
+                    </div>
+                    <div class="file-path-wrapper">
+                      <input class="file-path validate"  type="text">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <textarea id="comments" class="materialize-textarea" name="comments" id="comments"></textarea>
+                    <label for="comments">Comments</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <center>
+                      <input type="submit" class="btn" />
+                    </center>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+    </div>
+
+  </div>
+  <%include footer.html %>
+</body>
+</html>

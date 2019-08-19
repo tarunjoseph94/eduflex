@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <%include head.html%>
+</head>
+<body>
+  <%include nav.html%>
+
+  <section class="hero">
+    <div class="col s12">
+      <div class="herobg">
+      </div>
+    </div>
+  </section>
+  <div class="wrapper">
+    <div class="container-fluid">
+
+      <section class="feat">
+        <div class="row">
+          <div class="col s12">
+            <center>
+              <h2>Contact</h2>
+            </center>
+
+            <div class="contact">
+                <div class="col s12 m6">
+                  <div class="physical">
+                    <div class="phyheading">
+                      <h3>Address</h3>
+                    </div>
+                    <div class="phycontent">
+                      <p>
+                        # 2606, The Ambience,
+                        1st Floor, 27th Main Road,
+                        16th Cross HSR Layout,
+                        Sector-1, Near NIFT College,
+                        Bangalore - 560102
+                      </p>
+
+                    </div>
+                    <div class="phyheading">
+                      <h3>Telephone</h3>
+                    </div>
+                    <div class="phycontent">
+                      + 91 (80) 22589000, +91 9113820537
+                    </div>
+                  </div>
+                </div>
+                <div class="col s12 m6">
+                  <div class="form" ng-app="contactForm" ng-controller="validateCtrl">
+                    <form class=""  action="contact" method="post" name="contact" novalidate >
+                      <div class="input-field">
+                      <label for="name">Name</label>
+                        <input type="text" id="name" ng-model="name" name="name" placeholder="Name" ng-pattern="pattern.textOnlyPattern"  required />
+                      </div>
+                      <p ng-show="contact.name.$invalid && contact.name.$dirty">
+                        Please Enter only Alphabets
+                      </p>
+                      <div class="input-field">
+                        <label for="phone">Phone</label>
+                        <input type="number" id="phone" ng-model="phone" name="phone" placeholder="Phone" ng-minlength="10" required/>
+                      </div>
+                      <p ng-show="contact.phone.$invalid && contact.phone.$dirty">
+                        Please Enter only 10 digit number
+                      </p>
+                      <div class="input-field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" ng-model="email" name="email" placeholder="Email" required  />
+                      </div>
+                      <p ng-show="contact.email.$invalid && contact.email.$dirty">
+                        Please enter a valid email address
+                      </p>
+                      <div class="input-field">
+                        <label for="message">Message</label>
+                        <textarea class="materialize-textarea" rows="4" ng-model="message" name="message" id="message"  placeholder="Enter your message here..." required></textarea>
+                        <p ng-show="contact.message.$invalid && contact.message.$dirty">
+                          Please enter a valid message
+                        </p>
+                      </div>
+                      <div class="form-item">
+                        <input type="submit" ng-show="contact.$valid" class="btn" />
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+                <script>
+                var app=angular.module("contactForm",[]);
+                  app.controller('validateCtrl',function($scope)
+                              {
+                              $scope.name="";
+                              $scope.email="";
+                              $scope.phone="";
+                              $scope.message="";
+                              //            console.log($scope.    messageDump);
+                              $scope.pattern={
+                                textOnlyPattern:/^[a-zA-Z ]*$/g
+                              };
+                              });
+
+                </script>
+
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+    </div>
+
+  </div>
+  <%include footer.html %>
+</body>
+</html>

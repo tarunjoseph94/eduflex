@@ -1,0 +1,359 @@
+/* line 5, ../eduflex/assets/scss/style.scss */
+body {
+  margin: 0;
+  font-family: 'Roboto';
+  font-weight: 200;
+}
+
+/* line 12, ../eduflex/assets/scss/style.scss */
+.vcenter {
+  align-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+/* line 18, ../eduflex/assets/scss/style.scss */
+.link {
+  font-size: 14px;
+  margin-right: 30px;
+  font-family: Tahoma;
+  text-decoration: none;
+  color: #991636;
+}
+
+/* line 25, ../eduflex/assets/scss/style.scss */
+nav ul a {
+  color: #991636;
+}
+
+/* line 29, ../eduflex/assets/scss/style.scss */
+.dropdownlabel {
+  position: relative;
+  display: inline-block;
+}
+
+/* line 34, ../eduflex/assets/scss/style.scss */
+.dropdown-con {
+  position: absolute;
+  color: white;
+  min-width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  left: 0;
+  top: 63px;
+  background: #1a3665;
+}
+
+/* line 44, ../eduflex/assets/scss/style.scss */
+.dropdown-con > .center > span > a {
+  color: white;
+  display: inline-block;
+}
+
+/* line 49, ../eduflex/assets/scss/style.scss */
+.dropdown-con > .right > span > a {
+  color: white;
+  display: inline-block;
+}
+
+/* line 54, ../eduflex/assets/scss/style.scss */
+.flex {
+  display: flex;
+  flex-flow: row-reverse wrap;
+}
+
+/* line 59, ../eduflex/assets/scss/style.scss */
+.color {
+  background: white;
+}
+
+/* line 64, ../eduflex/assets/scss/style.scss */
+.width50 {
+  position: relative;
+  width: 50%;
+}
+
+/* line 69, ../eduflex/assets/scss/style.scss */
+.width40 {
+  position: relative;
+  width: 40%;
+}
+
+/* line 74, ../eduflex/assets/scss/style.scss */
+.triangle::after {
+  position: absolute;
+  z-index: 4;
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-left: 15px solid transparent;
+  /* left arrow slant */
+  border-right: 15px solid transparent;
+  /* right arrow slant */
+  border-bottom: 15px solid #1a3665;
+  top: -2vh;
+}
+
+/* line 86, ../eduflex/assets/scss/style.scss */
+.triangle.producttri::after {
+  left: 112vh;
+}
+
+/* line 89, ../eduflex/assets/scss/style.scss */
+.triangle.solutionstri::after {
+  left: 130vh;
+}
+
+/* line 92, ../eduflex/assets/scss/style.scss */
+.triangle.partnertri::after {
+  right: 60vh;
+}
+
+/* line 95, ../eduflex/assets/scss/style.scss */
+.triangle.abouttri::after {
+  right: 45vh;
+}
+
+/* line 98, ../eduflex/assets/scss/style.scss */
+.sidenav li > a {
+  color: #991636;
+}
+
+/* line 102, ../eduflex/assets/scss/style.scss */
+.sidenav li > a > i, .sidenav li > a > i.material-icons {
+  color: #991636;
+}
+
+/* line 106, ../eduflex/assets/scss/style.scss */
+.marright25 {
+  margin-right: 25vh;
+}
+
+/* line 110, ../eduflex/assets/scss/style.scss */
+.cardholder {
+  background: white;
+  border-radius: 25px;
+}
+
+/* line 116, ../eduflex/assets/scss/style.scss */
+.cardheading > h2 {
+  font-family: 'Roboto';
+  font-weight: 300;
+}
+
+/* line 121, ../eduflex/assets/scss/style.scss */
+.cardicon > center > img {
+  width: 100px;
+  margin-top: 5%;
+}
+
+/* line 126, ../eduflex/assets/scss/style.scss */
+.cardtext > p {
+  font-family: 'Roboto';
+  font-weight: 200;
+  text-align: justify;
+}
+
+/* line 133, ../eduflex/assets/scss/style.scss */
+.btn {
+  background: #991636;
+}
+
+/* line 137, ../eduflex/assets/scss/style.scss */
+.midcolor {
+  background: #efefef;
+}
+
+/* line 141, ../eduflex/assets/scss/style.scss */
+.footer {
+  background: #1a3665;
+  min-height: 350px;
+  padding-top: 25px;
+}
+
+/* line 147, ../eduflex/assets/scss/style.scss */
+.no-margin {
+  margin: 0;
+}
+
+/* line 151, ../eduflex/assets/scss/style.scss */
+.nomarginbottom {
+  margin-bottom: 0;
+}
+
+/* line 155, ../eduflex/assets/scss/style.scss */
+.credits {
+  background: #0a242f;
+  color: white;
+}
+
+/* line 159, ../eduflex/assets/scss/style.scss */
+.footercolumn > h4 {
+  margin-top: 0px;
+  color: white;
+}
+
+/* line 164, ../eduflex/assets/scss/style.scss */
+.footercolumn > h4 > a {
+  margin-top: 0px;
+  color: white;
+  text-decoration: none;
+}
+
+/* line 170, ../eduflex/assets/scss/style.scss */
+.footercolumn > ul > li > a {
+  color: white;
+  text-decoration: none;
+}
+
+/* line 175, ../eduflex/assets/scss/style.scss */
+.footercolumn > ul > li {
+  list-style: none;
+}
+
+/* line 181, ../eduflex/assets/scss/style.scss */
+.navtext > ul > li {
+  display: flex;
+  height: 85px;
+}
+
+/* line 185, ../eduflex/assets/scss/style.scss */
+.btn:hover {
+  background: #1a3665;
+}
+
+/* line 189, ../eduflex/assets/scss/style.scss */
+.navtext > ul {
+  list-style: none;
+  margin: 0;
+  height: 65px;
+  display: flex;
+}
+
+/* line 195, ../eduflex/assets/scss/style.scss */
+.herobg {
+  background: url("/img/hero.jpg");
+  min-width: 100%;
+  height: 50vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* line 206, ../eduflex/assets/scss/style.scss */
+.wrapper {
+  width: 90%;
+  margin: auto;
+  margin-top: -50px;
+  border: 2px solid #991636;
+  border-radius: 25px;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+  margin-bottom: 25px;
+}
+
+/* line 217, ../eduflex/assets/scss/style.scss */
+.contactindex {
+  padding: 35px;
+}
+
+/* line 222, ../eduflex/assets/scss/style.scss */
+.feat {
+  background: white;
+  border-radius: 25px;
+}
+
+/* line 227, ../eduflex/assets/scss/style.scss */
+.cardtext {
+  min-height: 150px;
+}
+
+/* line 231, ../eduflex/assets/scss/style.scss */
+.laptop {
+  position: relative;
+}
+
+/* line 234, ../eduflex/assets/scss/style.scss */
+.mainlaptop {
+  width: 100%;
+}
+
+/* line 238, ../eduflex/assets/scss/style.scss */
+.aplus {
+  width: 20%;
+  position: absolute;
+  top: 0px;
+  animation: ap 8s ease-in 2s infinite alternate;
+}
+
+@keyframes ap {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  100% {
+    left: 300px;
+    top: 0px;
+  }
+}
+
+/* line 249, ../eduflex/assets/scss/style.scss */
+.fees {
+  width: 10%;
+  position: absolute;
+  right: 0px;
+  top: 200px;
+  animation: fee 5s ease-in 2s infinite alternate;
+}
+
+@keyframes fee {
+  0% {
+    right: 0px;
+    top: 200px;
+  }
+  100% {
+    right: 100px;
+    top: 200px;
+  }
+}
+
+/* line 260, ../eduflex/assets/scss/style.scss */
+.analytics {
+  width: 20%;
+  position: absolute;
+  top: 210px;
+  animation: analysis 6s ease-in 2s infinite alternate;
+}
+
+@keyframes analysis {
+  0% {
+    left: 0px;
+    top: 210px;
+  }
+  100% {
+    left: 250px;
+    top: 210px;
+  }
+}
+
+/* line 271, ../eduflex/assets/scss/style.scss */
+.classroom {
+  width: 10%;
+  position: absolute;
+  top: 110px;
+  right: 200px;
+  animation: class 4s ease-in 2s infinite alternate;
+}
+
+@keyframes class {
+  0% {
+    right: 200px;
+    top: 110px;
+  }
+  100% {
+    right: 350px;
+    top: 110px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

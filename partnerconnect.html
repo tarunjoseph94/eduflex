@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <%include head.html%>
+</head>
+<body>
+  <%include nav.html%>
+
+  <section class="hero">
+    <div class="col s12">
+      <div class="herobg">
+      </div>
+    </div>
+  </section>
+  <div class="wrapper">
+    <div class="container-fluid">
+
+      <section class="feat">
+        <div class="row">
+          <div class="col s12">
+            <center>
+              <h2>Partner Connect Program</h2>
+            </center>
+            <p>
+              Join the Eduflex partnership program and expand your
+              opportunities to work with Eduflex and our vast user community.
+            </p>
+            <form class="" action="/partnerConnect" method="post">
+              <div class="row">
+                <div class="input-field col s12 m6">
+                  <input placeholder="First Name" id="first_name" name="first_name" type="text" class="validate">
+                  <label for="first_name">First Name</label>
+                </div>
+                <div class="input-field col s12 m6">
+                  <input placeholder="Last Name" id="last_name" name="last_name" type="text" class="validate">
+                  <label for="last_name">Last Name</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12 m6">
+                  <select name="primary_role" id="primary_role">
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="Admissions">Admissions</option>
+                    <option value="Assessment">Assessment</option>
+                    <option value="Consultant">Consultant</option>
+                    <option value="Faculty">Faculty</option>
+                    <option value="Trainer">Trainer</option>
+                    <option value="Funding Management">Funding Management</option>
+                    <option value="Human Resources">Human Resources</option>
+                    <option value="IT">IT</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Operations">Operations</option>
+                  </select>
+                  <label>Primary Role</label>
+                </div>
+                <div class="input-field col s12 m6">
+                  <select name="job_title" id="job_title">
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="CEO">CEO</option>
+                    <option value="CFO">CFO</option>
+                    <option value="CTO">CTO</option>
+                    <option value="Director">Director</option>
+                    <option value="Designer">Designer</option>
+                    <option value="Developer">Developer</option>
+                    <option value="Principal">Principal</option>
+                    <option value="Teacher">Teacher</option>
+                    <option value="Administrator">Administrator</option>
+                    <option value="President">President</option>
+                    <option value="Vice President">Vice President</option>
+                  </select>
+                  <label>Job Title Category</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12 m6">
+                  <input placeholder="Company/Organization" name="company" id="company" type="text" class="validate">
+                  <label for="company">Company/Organization</label>
+                </div>
+                <div class="input-field col s12 m6">
+                  <input placeholder="Email" id="email" type="text" name="email" class="validate">
+                  <label for="email">Email</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12 m6">
+                  <input placeholder="Country" id="country" type="text" name="country" class="validate">
+                  <label for="country">Country</label>
+                </div>
+                <div class="input-field col s12 m6">
+                  <select name="discover" id="discover">
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="Email">Email</option>
+                    <option value="Website">Website</option>
+                    <option value="Referral">Referral</option>
+                    <option value="Facebook">Facebook</option>
+                    <option value="Twitter">Twitter</option>
+                    <option value="Blog">Blog</option>
+                    <option value="Other">Other</option>
+                  </select>
+                  <label>How did you hear about Eduflex Partnerships</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <textarea id="plat_interest" name="plat_interest" class="materialize-textarea"></textarea>
+                  <label for="plat_interest">With which platform are you interested in partnering</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <textarea id="comments" name="comments" class="materialize-textarea"></textarea>
+                  <label for="comments">Comments</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <center>
+                    <input type="submit" class="btn" />
+                  </center>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </div>
+
+</div>
+<%include footer.html %>
+</body>
+</html>

@@ -1,0 +1,281 @@
+$blue:#1a3665;
+$red:#991636;
+$grey:#efefef;
+$per50:50%;
+body{
+  margin: 0;
+  font-family: 'Roboto';
+  font-weight: 200;
+}
+
+
+.vcenter{
+  align-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.link {
+    font-size: 14px;
+    margin-right: 30px;
+    font-family: Tahoma;
+    text-decoration: none;
+    color: $red;
+}
+nav ul a
+{
+  color: $red;
+}
+.dropdownlabel
+{
+  position: relative;
+  display: inline-block;
+}
+.dropdown-con {
+  position: absolute;
+    color: white;
+    min-width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: 0;
+    top: 63px;
+    background: $blue;
+}
+.dropdown-con>.center>span>a
+{
+  color: white;
+  display: inline-block;
+}
+.dropdown-con>.right>span>a
+{
+  color: white;
+  display: inline-block;
+}
+.flex{
+  display: flex;
+  flex-flow: row-reverse wrap;
+}
+
+.color
+{
+  background: white;
+
+}
+.width50
+{
+  position: relative;
+  width: $per50;
+}
+.width40
+{
+  position:relative;
+  width: 40%;
+}
+.triangle::after
+{
+  position: absolute;
+  z-index: 4;
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-left: 15px solid transparent;  /* left arrow slant */
+	border-right: 15px solid transparent; /* right arrow slant */
+	border-bottom: 15px solid $blue;
+  top: -2vh;
+}
+.triangle.producttri::after{
+  left: 112vh;
+}
+.triangle.solutionstri::after{
+  left: 130vh;
+}
+.triangle.partnertri::after{
+  right: 60vh;
+}
+.triangle.abouttri::after{
+  right: 45vh;
+}
+.sidenav li>a
+{
+  color: $red;
+}
+.sidenav li>a>i,.sidenav li>a>i.material-icons
+{
+  color: $red;
+}
+.marright25
+{
+  margin-right: 25vh;
+}
+.cardholder{
+// display: flex;
+ background: white;
+ border-radius: 25px;
+}
+
+.cardheading>h2
+{
+  font-family: 'Roboto';
+  font-weight: 300;
+}
+.cardicon>center>img
+{
+  width: 100px;
+  margin-top: 5%;
+}
+.cardtext>p
+{
+  font-family: 'Roboto';
+  font-weight: 200;
+
+  text-align: justify;
+}
+.btn {
+    background: $red;
+
+}
+.midcolor
+{
+  background: $grey;
+}
+.footer
+{
+  background: $blue;
+  min-height: 350px;
+  padding-top:25px;
+}
+.no-margin
+{
+  margin: 0;
+}
+.nomarginbottom
+{
+  margin-bottom: 0;
+}
+.credits {
+    background: #0a242f;
+    color: white;
+  }
+.footercolumn>h4
+{
+  margin-top: 0px;
+  color: white
+}
+.footercolumn>h4>a
+{
+  margin-top: 0px;
+  color: white;
+  text-decoration: none;
+}
+.footercolumn>ul>li>a
+{
+  color: white;
+  text-decoration: none;
+}
+.footercolumn>ul>li
+{
+  list-style: none;
+}
+
+
+.navtext>ul>li {
+  display: flex;
+  height: 85px;
+}
+.btn:hover
+{
+  background: $blue;
+}
+.navtext>ul {
+    list-style: none;
+    margin: 0;
+    height: 65px;
+    display: flex;
+}
+.herobg{
+  background: url("/img/hero.jpg") ;
+  min-width: 100%;
+  height: 50vh;
+  background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+
+.wrapper
+{
+  width: 90%;
+  margin: auto;
+  margin-top: -50px;
+  border: 2px solid $red;
+  border-radius: 25px;
+  box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.2);
+      margin-bottom: 25px;
+
+}
+.contactindex
+{
+
+  padding: 35px;
+}
+.feat
+{
+  background: white;
+  border-radius: 25px;
+}
+.cardtext
+{
+  min-height: 150px;
+}
+.laptop{
+  position: relative;
+}
+.mainlaptop
+{
+  width: 100%;
+}
+.aplus
+{
+  width: 20%;
+  position: absolute;
+  top: 0px;
+  animation: ap 8s ease-in 2s infinite alternate;
+}
+@keyframes ap {
+  0%   {left:0px; top:0px;}
+  100% {left:300px; top:0px;}
+}
+.fees{
+  width: 10%;
+  position: absolute;
+  right:0px;
+  top:200px;
+  animation: fee 5s ease-in 2s infinite alternate;
+}
+@keyframes fee {
+  0%   {right:0px; top:200px;}
+  100% {right:100px; top:200px;}
+}
+.analytics
+{
+  width: 20%;
+  position: absolute;
+  top: 210px;
+  animation: analysis 6s ease-in 2s infinite alternate;
+}
+@keyframes analysis{
+  0%   {left:0px; top:210px;}
+  100% {left:250px; top:210px;}
+}
+.classroom{
+    width: 10%;
+    position: absolute;
+    top: 110px;
+    right:200px;
+    animation: class 4s ease-in 2s infinite alternate;
+  }
+@keyframes class{
+  0%   {right:200px; top:110px;}
+  100%   {right:350px; top:110px;}
+}
