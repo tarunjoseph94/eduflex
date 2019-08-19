@@ -96,22 +96,22 @@ nav ul a {
 
 /* line 86, ../eduflex/assets/scss/style.scss */
 .triangle.producttri::after {
-  left: 112vh;
+  left: 131vh;
 }
 
 /* line 89, ../eduflex/assets/scss/style.scss */
 .triangle.solutionstri::after {
-  left: 130vh;
+  right: 70vh;
 }
 
 /* line 92, ../eduflex/assets/scss/style.scss */
 .triangle.partnertri::after {
-  right: 60vh;
+  right: 50vh;
 }
 
 /* line 95, ../eduflex/assets/scss/style.scss */
 .triangle.abouttri::after {
-  right: 45vh;
+  right: 35vh;
 }
 
 /* line 98, ../eduflex/assets/scss/style.scss */
