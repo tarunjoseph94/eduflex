@@ -9,6 +9,7 @@ server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({
   extended: true
 }));
+const  port = process.env.PORT || 3000;
 
 server.use(fileUpload());
 templatesjs.dir = "./templates/";
@@ -316,5 +317,4 @@ function resumeUpload(fileData)
   }
 
 server.use(express.static(__dirname+'/assets'));
-server.listen(3001);
-console.log("server ready at 3001");
+server.listen(port, () => console.log('Listening on '+ port ));
