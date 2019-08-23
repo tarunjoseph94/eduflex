@@ -183,11 +183,10 @@ server.post('/partnerConnect',function(req,res){
   }
 });
 server.post('/careers',function(req,res){
-  if (Object.keys(req.files).length == 0) {
-    return res.status(400).send('No files were uploaded.');
-  }
-  else
-{
+  var fileErr=1;
+  var mailErr=1;
+
+  if (req.files !=undefined && req.files.resume.mimetype=='application/pdf' ) {
     var emailType="careers";
     var data={
       "fname":req.body.first_name,
@@ -202,13 +201,14 @@ server.post('/careers',function(req,res){
         "eligibility":req.body.eligibility,
         "relocate":req.body.relocate,
         "availabilityDate":req.body.availabilityDate,
-        "resume":req.files.resume.name,
+        "resume":req.files.resume.name.replace(/ /g, ''),
         "comments":req.body.comments
     }
-    var fileErr=resumeUpload(req.files.resume)
-    var mailErr=sendMail(emailType,data);
+    fileErr=resumeUpload(req.files.resume)
+   mailErr=sendMail(emailType,data);
     console.log(mailErr);
     console.log(fileErr);
+  }
     if(mailErr==0 && fileErr==0 )
     {
       fs.readFile("emailsuccess.html", function(err,data){
@@ -234,7 +234,6 @@ server.post('/careers',function(req,res){
         });
       });
     }
-  }
 });
 function sendMail(emailType,data)
 {
@@ -271,7 +270,7 @@ switch (emailType) {
           from: 'brownboi741@gmail.com',
           to: 'terrorjoseph@gmail.com',
           subject: 'Edufex Apply Career',
-          html: '<p>Hi<br/> My name is '+data['fname']+' '+data['lname']+'<br/> I stay at '+data['address']+' in '+data['city']+' , '+data['country']+' <br/>you can find my resume at http://localhost:3001/uploads/'+data['resume']+'<br/> I would like salary of'+data['salary']+' or an hour rate of '+data['hourlyRate']+'<br/> my eligibility is '+data['eligibility']+'<br/>willing to relocate: '+data['relocate']+'<br/>I am available to join from '+data['availabilityDate']+' <br/>For more information you can email me at '+data['email']+' or call me at '+data['phone']+'<br/>Comments : '+data['comments']+'</p>'
+          html: '<p>Hi<br/> My name is '+data['fname']+' '+data['lname']+'<br/> I stay at '+data['address']+' in '+data['city']+' , '+data['country']+' <br/>you can find my resume at http://localhost:3000/upload/'+data['resume']+'<br/> I would like salary of'+data['salary']+' or an hour rate of '+data['hourlyRate']+'<br/> my eligibility is '+data['eligibility']+'<br/>willing to relocate: '+data['relocate']+'<br/>I am available to join from '+data['availabilityDate']+' <br/>For more information you can email me at '+data['email']+' or call me at '+data['phone']+'<br/>Comments : '+data['comments']+'</p>'
         };
 
         break;1
@@ -292,12 +291,15 @@ return errorFlag;
 function resumeUpload(fileData)
 {
   var errorFlag=0;
+  fileData.name=fileData.name.replace(/ /g, '');
   var file=fileData;
+  console.log(file);
       var filename=file.name;
-
+      console.log(filename)
       if (!fs.existsSync("./upload/")){
         fs.mkdirSync("./upload/");
 
+      }
         file.mv("./upload/"+filename,function(err){
         if(err){
           console.log("err");
@@ -312,7 +314,6 @@ function resumeUpload(fileData)
 
         }
       });
-    }
     return errorFlag;
   }
 

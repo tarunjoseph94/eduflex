@@ -17,7 +17,7 @@
 
       <section class="feat">
         <div class="row">
-          <div class="col s12">
+          <div class="col s12" ng-app="partnerForm" ng-controller="validateCtrl">
             <center>
               <h2>Partner Connect Program</h2>
             </center>
@@ -25,21 +25,26 @@
               Join the Eduflex partnership program and expand your
               opportunities to work with Eduflex and our vast user community.
             </p>
-            <form class="" action="/partnerConnect" method="post">
+            <form class="" action="/partnerConnect" method="post" name="partnerConnect" novalidate>
               <div class="row">
                 <div class="input-field col s12 m6">
-                  <input placeholder="First Name" id="first_name" name="first_name" type="text" class="validate">
+                  <input placeholder="First Name" id="first_name" name="first_name" type="text" class="validate" ng-model="first_name" ng-pattern="pattern.textOnlyPattern"  required>
                   <label for="first_name">First Name</label>
+                  <p ng-show="partnerConnect.first_name.$invalid && partnerConnect.first_name.$dirty">
+                    Please Enter only Alphabets
+                  </p>
                 </div>
                 <div class="input-field col s12 m6">
-                  <input placeholder="Last Name" id="last_name" name="last_name" type="text" class="validate">
+                  <input placeholder="Last Name" id="last_name" name="last_name" type="text" class="validate" ng-model="last_name" ng-pattern="pattern.textOnlyPattern"  required>
                   <label for="last_name">Last Name</label>
+                  <p ng-show="partnerConnect.last_name.$invalid && partnerConnect.last_name.$dirty">
+                    Please Enter only Alphabets
+                  </p>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12 m6">
-                  <select name="primary_role" id="primary_role">
-                    <option value="" disabled selected>Choose your option</option>
+                  <select name="primary_role" ng-model="primary_role" id="primary_role" required>
                     <option value="Admissions">Admissions</option>
                     <option value="Assessment">Assessment</option>
                     <option value="Consultant">Consultant</option>
@@ -50,12 +55,15 @@
                     <option value="IT">IT</option>
                     <option value="Marketing">Marketing</option>
                     <option value="Operations">Operations</option>
+                    <option value="Operations">Other</option>
                   </select>
                   <label>Primary Role</label>
+                  <p ng-show="partnerConnect.job_title.$invalid ">
+                    Please select a primary role
+                  </p>
                 </div>
                 <div class="input-field col s12 m6">
-                  <select name="job_title" id="job_title">
-                    <option value="" disabled selected>Choose your option</option>
+                  <select name="job_title" ng-model="job_title" id="job_title" required>
                     <option value="CEO">CEO</option>
                     <option value="CFO">CFO</option>
                     <option value="CTO">CTO</option>
@@ -67,28 +75,40 @@
                     <option value="Administrator">Administrator</option>
                     <option value="President">President</option>
                     <option value="Vice President">Vice President</option>
+                    <option value="Vice President">Other</option>
                   </select>
                   <label>Job Title Category</label>
                 </div>
+                <p ng-show="partnerConnect.job_title.$invalid ">
+                  Please select a  job title
+                </p>
               </div>
               <div class="row">
                 <div class="input-field col s12 m6">
-                  <input placeholder="Company/Organization" name="company" id="company" type="text" class="validate">
+                  <input placeholder="Company/Organization" name="company" id="company" type="text" ng-model="company" class="validate" ng-model="email" required>
                   <label for="company">Company/Organization</label>
+                  <p ng-show="partnerConnect.company.$invalid && partnerConnect.company.$dirty">
+                    Please enter company name
+                  </p>
                 </div>
                 <div class="input-field col s12 m6">
-                  <input placeholder="Email" id="email" type="text" name="email" class="validate">
+                  <input placeholder="Email" id="email" type="email" name="email" class="validate" ng-model="email" required>
                   <label for="email">Email</label>
+                  <p ng-show="partnerConnect.email.$invalid && partnerConnect.email.$dirty">
+                    Please enter a valid email id
+                  </p>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12 m6">
-                  <input placeholder="Country" id="country" type="text" name="country" class="validate">
+                  <input placeholder="Country" id="country" type="text" name="country" ng-model="country" required ng-pattern="pattern.textOnlyPattern" class="validate">
                   <label for="country">Country</label>
+                  <p ng-show="partnerConnect.country.$invalid && partnerConnect.country.$dirty">
+                    Please enter a valid company name
+                  </p>
                 </div>
                 <div class="input-field col s12 m6">
-                  <select name="discover" id="discover">
-                    <option value="" disabled selected>Choose your option</option>
+                  <select name="discover" id="discover" ng-model="discover" required>
                     <option value="Email">Email</option>
                     <option value="Website">Website</option>
                     <option value="Referral">Referral</option>
@@ -98,26 +118,49 @@
                     <option value="Other">Other</option>
                   </select>
                   <label>How did you hear about Eduflex Partnerships</label>
+                  <p ng-show="partnerConnect.discover.$invalid">
+                    Please select an option
+                  </p>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
-                  <textarea id="plat_interest" name="plat_interest" class="materialize-textarea"></textarea>
+                  <textarea id="plat_interest" ng-model="plat_interest" name="plat_interest" class="materialize-textarea" required></textarea>
                   <label for="plat_interest">With which platform are you interested in partnering</label>
-                </div>
+                  <p ng-show="partnerConnect.plat_interest.$invalid && partnerConnect.plat_interest.$dirty">
+                    Please enter how you would like to work with us
+                  </p>
+                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
-                  <textarea id="comments" name="comments" class="materialize-textarea"></textarea>
+                  <textarea id="comments" name="comments" ng-model="comments" class="materialize-textarea"></textarea>
                   <label for="comments">Comments</label>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
                   <center>
-                    <input type="submit" class="btn" />
+                    <input type="submit" class="btn" ng-show="partnerConnect.$valid" />
                   </center>
                 </div>
+                <script>
+                var app=angular.module("partnerForm",[]);
+                  app.controller('validateCtrl',function($scope)
+                              {
+                                $scope.first_name="";
+                                $scope.last_name="";
+                                $scope.primary_role="";
+                                $scope.job_title="";
+                                $scope.company="";
+                                $scope.discover=null;
+                                $scope.primary_role=null;
+                              $scope.pattern={
+                                textOnlyPattern:/^[a-zA-Z ]*$/
+                              };
+                              });
+
+                </script>
               </div>
             </form>
           </div>
